@@ -1,4 +1,4 @@
-# StudentManagementSystem
+# StudentManagementSystem1
 
 A small ASP.NET Core Web API for managing students, courses, and course enrollments.
 
