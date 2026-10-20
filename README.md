@@ -23,19 +23,6 @@ The API exposes endpoints to:
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
 
-## Solution structure
-
-```
-StudentManagementSystem.sln
-src/
-  StudentManagementSystem.Api/      # ASP.NET Core Web API
-    Controllers/                    # Students, Courses, Enrollments controllers
-    Models/                         # Student, Course, Enrollment entities
-    Data/                           # AppDbContext and seed data
-tests/
-  StudentManagementSystem.Tests/    # xUnit test project
-```
-
 ## Restore dependencies
 
 ```bash
