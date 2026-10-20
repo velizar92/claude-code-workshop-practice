@@ -21,6 +21,14 @@ public class EnrollmentsController : ControllerBase
         var student = _context.Students.Single(s => s.Id == request.StudentId);
         var course = _context.Courses.Single(c => c.Id == request.CourseId);
 
+        var alreadyEnrolled = _context.Enrollments
+            .Any(e => e.StudentId == request.StudentId && e.CourseId == request.CourseId);
+
+        if (alreadyEnrolled)
+        {
+            return Conflict($"Student {student.Id} is already enrolled in course {course.Id}.");
+        }
+
         var enrollment = new Enrollment
         {
             StudentId = student.Id,
