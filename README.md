@@ -56,16 +56,6 @@ dotnet run --project src/StudentManagementSystem.Api
 
 By default the API listens on the URL(s) printed in the console output (see `src/StudentManagementSystem.Api/Properties/launchSettings.json` for the configured profiles).
 
-## Access Swagger / OpenAPI
-
-Once the API is running, open:
-
-```
-http://localhost:<port>/swagger
-```
-
-to browse and try out the available endpoints.
-
 ## Database initialization
 
 The API uses SQLite. On startup it calls `Database.EnsureCreated()` to create the database file (`studentmanagement.db`, configured via the `DefaultConnection` connection string in `appsettings.json`) if it doesn't already exist, and then seeds it with a deterministic set of sample students, courses, and enrollments if the database is empty. Restarting the application does not duplicate the seed data.
